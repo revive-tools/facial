@@ -1,0 +1,20 @@
+{
+  "name": "@revive-tools/facial-win32-x64-msvc",
+  "version": "0.0.0",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "facial.win32-x64-msvc.node",
+  "files": [
+    "facial.win32-x64-msvc.node"
+  ],
+  "description": "facial recognition for node.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 16"
+  },
+  "repository": "https://github.com/revive-tools/facial"
+}

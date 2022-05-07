@@ -1,0 +1,21 @@
+[package]
+edition = "2021"
+name = "recognition"
+version = "0.0.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
+napi = { version = "2.3.3", default-features = false, features = ["napi6"] }
+napi-derive = "2.3.3"
+dlib-face-recognition = { version = "0.2.2", features = ["embed-all"] }
+image = "0.23"
+lazy_static = "1.4.0"
+
+[build-dependencies]
+napi-build = "1.2.1"
+
+[profile.release]
+lto = true

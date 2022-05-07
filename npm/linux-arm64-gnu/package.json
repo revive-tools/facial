@@ -1,0 +1,23 @@
+{
+  "name": "@revive-tools/facial-linux-arm64-gnu",
+  "version": "0.0.0",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "facial.linux-arm64-gnu.node",
+  "files": [
+    "facial.linux-arm64-gnu.node"
+  ],
+  "description": "facial recognition for node.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 16"
+  },
+  "repository": "https://github.com/revive-tools/facial",
+  "libc": [
+    "glibc"
+  ]
+}

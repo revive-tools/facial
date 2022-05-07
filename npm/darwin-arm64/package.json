@@ -1,0 +1,20 @@
+{
+  "name": "@revive-tools/facial-darwin-arm64",
+  "version": "0.0.0",
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "facial.darwin-arm64.node",
+  "files": [
+    "facial.darwin-arm64.node"
+  ],
+  "description": "facial recognition for node.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 16"
+  },
+  "repository": "https://github.com/revive-tools/facial"
+}
