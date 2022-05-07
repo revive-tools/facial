@@ -30,7 +30,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./facial.android-arm64.node')
           } else {
-            nativeBinding = require('@revive-oss/facial-android-arm64')
+            nativeBinding = require('@revive-tools/facial-android-arm64')
           }
         } catch (e) {
           loadError = e
@@ -42,7 +42,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./facial.android-arm-eabi.node')
           } else {
-            nativeBinding = require('@revive-oss/facial-android-arm-eabi')
+            nativeBinding = require('@revive-tools/facial-android-arm-eabi')
           }
         } catch (e) {
           loadError = e
@@ -62,7 +62,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./facial.win32-x64-msvc.node')
           } else {
-            nativeBinding = require('@revive-oss/facial-win32-x64-msvc')
+            nativeBinding = require('@revive-tools/facial-win32-x64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -76,7 +76,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./facial.win32-ia32-msvc.node')
           } else {
-            nativeBinding = require('@revive-oss/facial-win32-ia32-msvc')
+            nativeBinding = require('@revive-tools/facial-win32-ia32-msvc')
           }
         } catch (e) {
           loadError = e
@@ -90,7 +90,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./facial.win32-arm64-msvc.node')
           } else {
-            nativeBinding = require('@revive-oss/facial-win32-arm64-msvc')
+            nativeBinding = require('@revive-tools/facial-win32-arm64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -108,7 +108,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./facial.darwin-x64.node')
           } else {
-            nativeBinding = require('@revive-oss/facial-darwin-x64')
+            nativeBinding = require('@revive-tools/facial-darwin-x64')
           }
         } catch (e) {
           loadError = e
@@ -122,7 +122,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./facial.darwin-arm64.node')
           } else {
-            nativeBinding = require('@revive-oss/facial-darwin-arm64')
+            nativeBinding = require('@revive-tools/facial-darwin-arm64')
           }
         } catch (e) {
           loadError = e
@@ -141,7 +141,7 @@ switch (platform) {
       if (localFileExisted) {
         nativeBinding = require('./facial.freebsd-x64.node')
       } else {
-        nativeBinding = require('@revive-oss/facial-freebsd-x64')
+        nativeBinding = require('@revive-tools/facial-freebsd-x64')
       }
     } catch (e) {
       loadError = e
@@ -158,7 +158,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./facial.linux-x64-musl.node')
             } else {
-              nativeBinding = require('@revive-oss/facial-linux-x64-musl')
+              nativeBinding = require('@revive-tools/facial-linux-x64-musl')
             }
           } catch (e) {
             loadError = e
@@ -171,7 +171,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./facial.linux-x64-gnu.node')
             } else {
-              nativeBinding = require('@revive-oss/facial-linux-x64-gnu')
+              nativeBinding = require('@revive-tools/facial-linux-x64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -187,7 +187,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./facial.linux-arm64-musl.node')
             } else {
-              nativeBinding = require('@revive-oss/facial-linux-arm64-musl')
+              nativeBinding = require('@revive-tools/facial-linux-arm64-musl')
             }
           } catch (e) {
             loadError = e
@@ -200,7 +200,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./facial.linux-arm64-gnu.node')
             } else {
-              nativeBinding = require('@revive-oss/facial-linux-arm64-gnu')
+              nativeBinding = require('@revive-tools/facial-linux-arm64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -215,7 +215,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./facial.linux-arm-gnueabihf.node')
           } else {
-            nativeBinding = require('@revive-oss/facial-linux-arm-gnueabihf')
+            nativeBinding = require('@revive-tools/facial-linux-arm-gnueabihf')
           }
         } catch (e) {
           loadError = e
@@ -236,6 +236,8 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { faceLocations } = nativeBinding
+const { faceLocations, faceLandmarks, faceEncodings } = nativeBinding
 
 module.exports.faceLocations = faceLocations
+module.exports.faceLandmarks = faceLandmarks
+module.exports.faceEncodings = faceEncodings

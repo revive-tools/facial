@@ -9,4 +9,10 @@ export interface FaceLocation {
   right: number
   bottom: number
 }
+export interface FacePoint {
+  x: number
+  y: number
+}
 export function faceLocations(input: Buffer): Array<FaceLocation>
+export function faceLandmarks(input: Buffer, location: FaceLocation): Array<FacePoint>
+export function faceEncodings(input: Buffer, location: FaceLocation, jitters?: number | undefined | null): Array<number>
