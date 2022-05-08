@@ -1,7 +1,14 @@
 [package]
 edition = "2021"
-name = "recognition"
-version = "0.0.0"
+name = "facial"
+version = "0.1.0"
+authors = ["Mykhailo Marynenko <0x77dev@protonmail.com>"]
+documentation = "https://github.com/revive-tools/facial"
+readme = "README.md"
+homepage = "https://revive.tools/"
+license = "GPL-3.0"
+license-file = "LICENSE"
+keywords = ["facial", "recognition", "napi", "dlib", "landmarks", "locations"]
 
 [lib]
 crate-type = ["cdylib"]

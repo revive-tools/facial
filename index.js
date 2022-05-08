@@ -236,8 +236,7 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { faceLocations, faceLandmarks, faceEncodings } = nativeBinding
+const { Facial, compareFaces } = nativeBinding
 
-module.exports.faceLocations = faceLocations
-module.exports.faceLandmarks = faceLandmarks
-module.exports.faceEncodings = faceEncodings
+module.exports.Facial = Facial
+module.exports.compareFaces = compareFaces

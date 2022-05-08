@@ -1,6 +1,6 @@
 {
   "name": "@revive-tools/facial",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
@@ -15,12 +15,22 @@
       ]
     }
   },
-  "license": "MIT",
+  "license": "GPL-3.0",
   "devDependencies": {
     "@napi-rs/cli": "^2.8.0",
     "ava": "^4.2.0",
     "got": "^12.0.4"
   },
+  "keywords": [
+    "facial",
+    "recognition",
+    "napi",
+    "dlib",
+    "landmarks",
+    "face",
+    "locations",
+    "rust"
+  ],
   "engines": {
     "node": ">= 16"
   },
