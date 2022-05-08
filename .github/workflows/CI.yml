@@ -277,7 +277,7 @@ jobs:
           options: '-v ${{ github.workspace }}:/build -w /build'
           run: |
             set -e
-            apk add nodejs npm yarn
+            apk add nodejs npm yarn openssl-dev
             yarn test
   publish:
     name: Publish
